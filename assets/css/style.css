@@ -1,0 +1,352 @@
+/*
+// ======================================================
+// BOARD
+// ======================================================
+*/
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--bg);
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: 125px repeat(9, 80px) 125px;
+  grid-template-rows: 105px repeat(9, 80px) 105px;
+  border: 1px solid var(--black);
+  background-color: var(--board);
+}
+
+/*
+-----------------------------------------------------
+// ROWS
+-----------------------------------------------------
+*/
+
+.game-container .row {
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+
+.game-container .horizontal {
+  grid-template-columns: repeat(9, 1fr);
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+.game-container .vertical {
+  grid-template-rows: repeat(9, 1fr);
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+/*
+-----------------------------------------------------
+// ROWS - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// CENTER
+-----------------------------------------------------
+*/
+
+.center {
+  grid-column: 2 / 11;
+  grid-row: 2 / 11;
+  border: 1px solid var(--black);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.center .logo {
+  font-size: var(--font55);
+  font-weight: var(--fw600);
+  letter-spacing: 9px;
+}
+
+/*
+-----------------------------------------------------
+// CENTER - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// TOP
+-----------------------------------------------------
+*/
+
+.game-container .top {
+  grid-column: 2/11;
+}
+
+/*
+-----------------------------------------------------
+// TOP - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// RIGHT
+-----------------------------------------------------
+*/
+
+.game-container .right {
+  grid-column: 11;
+  grid-row: 2 / 11;
+}
+
+/*
+-----------------------------------------------------
+// RIGHT - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// BOTTOM
+-----------------------------------------------------
+*/
+
+.game-container .bottom {
+  grid-column: 2 / 11;
+  grid-row: 11;
+  direction: rtl;
+}
+
+/*
+-----------------------------------------------------
+// BOTTOM - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// LEFT
+-----------------------------------------------------
+*/
+
+.game-container .left {
+  grid-column: 1;
+  grid-row: 2 / 11;
+}
+
+.game-container .left .place31 {
+  grid-row: 10;
+}
+
+.game-container .left .place32 {
+  grid-row: 9;
+}
+
+.game-container .left .place33 {
+  grid-row: 8;
+}
+
+.game-container .left .place34 {
+  grid-row: 7;
+}
+
+.game-container .left .place35 {
+  grid-row: 6;
+}
+
+.game-container .left .place36 {
+  grid-row: 5;
+}
+
+.game-container .left .place37 {
+  grid-row: 4;
+}
+
+.game-container .left .place38 {
+  grid-row: 3;
+}
+
+.game-container .left .place39 {
+  grid-row: 2;
+}
+
+.game-container .left .place40 {
+  grid-row: 1;
+}
+
+/*
+-----------------------------------------------------
+// LEFT - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// CORNERS
+-----------------------------------------------------
+*/
+
+.game-container .corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container .jail {
+  grid-column: 11;
+  grid-row: 1 / 1;
+}
+
+.game-container .trip {
+  grid-column: 11;
+}
+
+.game-container .go-to-jail {
+  grid-column: 1;
+  grid-row: 11 / 12;
+}
+
+/*
+-----------------------------------------------------
+// CORNERS - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// PLACES
+-----------------------------------------------------
+*/
+
+.game-container .top li:not(:last-child) {
+  border-right: 1px solid var(--black);
+}
+
+.game-container .right li:not(:last-child) {
+  border-bottom: 1px solid var(--black);
+}
+
+.game-container .bottom li:not(:last-child) {
+  border-left: 1px solid var(--black);
+}
+
+.game-container .left li:not(:last-child) {
+  border-top: 1px solid var(--black);
+}
+
+/*
+-----------------------------------------------------
+// PLACES - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// CORNERS - END
+-----------------------------------------------------
+*/
+
+/*
+-----------------------------------------------------
+// PLACE INFO
+-----------------------------------------------------
+*/
+
+/*
+~~~~~~~~~~~~~~~~~~~~
+// General
+~~~~~~~~~~~~~~~~~~~~
+*/
+
+.game-container .row li button {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: var(--font14);
+  font-weight: var(--fw600);
+}
+
+.game-container .row .country button .description {
+  display: block;
+  background-color: rgb(62, 62, 181);
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~
+// General
+~~~~~~~~~~~~~~~~~~~~
+*/
+
+.game-container .horizontal li button {
+  flex-direction: column;
+}
+
+.game-container .horizontal .country button .description {
+  width: 100%;
+  height: 25px;
+}
+
+.game-container .vertical .country button .description {
+  flex: 0 0 20%;
+  height: 100%;
+}
+
+.game-container .horizontal .country button .landing-spot {
+  flex-grow: 1;
+  width: 100%;
+  height: 25px;
+}
+
+.game-container .vertical .country button .landing-spot {
+  flex: 0 0 80%;
+  height: 100%;
+  padding: 5px;
+}
+
+.game-container .right .country button {
+  flex-direction: row;
+}
+
+.game-container .left .country button {
+  flex-direction: row-reverse;
+}
+
+/*
+-----------------------------------------------------
+// PLACE INFO - END
+-----------------------------------------------------
+*/
+
+/*
+// ======================================================
+// BOARD - END
+// ======================================================
+*/
+
+/*
+// ======================================================
+// SIDEBAR
+// ======================================================
+*/
+
+.sidebar {
+  margin-left: 60px;
+}
+
+.sidebar .start-game {
+  border: 1px solid white;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+/*
+// ======================================================
+// SIDEBAR - END
+// ======================================================
+*/
