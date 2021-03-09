@@ -1,4 +1,7 @@
-<?php require_once('app/classes/Board.class.php'); ?>
+<?php
+require_once('app/helpers/functions.php');
+require_once('app/models/Board.class.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
